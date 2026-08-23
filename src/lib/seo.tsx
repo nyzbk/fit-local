@@ -1,6 +1,6 @@
 import { FAQ } from "@/content/faq";
 
-const SITE = "https://fit-local.vercel.app";
+const SITE = "https://fit-local-six.vercel.app";
 
 export function JsonLd() {
   const faq = {

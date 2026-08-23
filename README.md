@@ -4,7 +4,7 @@ Resize photos for Instagram, YouTube and X in the browser. Exact pixels, social 
 
 No upload. No signup. No watermark.
 
-- Domain: [fit-local.vercel.app](https://fit-local.vercel.app)
+- Domain: [fit-local-six.vercel.app](https://fit-local-six.vercel.app)
 - Repo: [nyzbk/fit-local](https://github.com/nyzbk/fit-local)
 - Design canon: [`00_DESIGN_BY_PRODUCT_NOT_TEMPLATE.md`](./00_DESIGN_BY_PRODUCT_NOT_TEMPLATE.md)
 
