@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/*
+  Fit visual system — dark Swiss studio because this tool is cropping,
+  not because a previous app used paper. Canon: 00_DESIGN_BY_PRODUCT_NOT_TEMPLATE.md
+  Forbidden here: #f3eee4, #b45309, Fraunces, Figtree, rounded-full as system radius.
+*/
+@theme {
+  --color-bg: #0b0f14;
+  --color-surface: #141a22;
+  --color-elevated: #1b2330;
+  --color-fg: #eef2f6;
+  --color-muted: #8b95a5;
+  --color-line: #2a3340;
+  --color-accent: #2ee6a6;
+  --color-on-accent: #05251a;
+  --color-warn: #e6c36a;
+  --color-danger: #f07178;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --shadow-border: 0 0 0 1px rgba(238, 242, 246, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(46, 230, 166, 0.35);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+.checkerboard {
+  background-color: #121820;
+  background-image:
+    linear-gradient(45deg, #1b2330 25%, transparent 25%),
+    linear-gradient(-45deg, #1b2330 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #1b2330 75%),
+    linear-gradient(-45deg, transparent 75%, #1b2330 75%);
+  background-size: 16px 16px;
+  background-position:
+    0 0,
+    0 8px,
+    8px -8px,
+    -8px 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
