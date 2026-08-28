@@ -31,5 +31,6 @@ export function HowItWorks() {
         .
       </p>
     </section>
+
   );
 }
