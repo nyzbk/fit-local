@@ -71,6 +71,19 @@
     -8px 0;
 }
 
+.article-prose h2 {
+  color: var(--color-fg);
+}
+
+.article-prose a {
+  color: var(--color-accent);
+  text-underline-offset: 4px;
+}
+
+.article-prose a:hover {
+  text-decoration: underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
