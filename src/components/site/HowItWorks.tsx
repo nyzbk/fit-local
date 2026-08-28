@@ -19,6 +19,17 @@ export function HowItWorks() {
           </li>
         ))}
       </ol>
+      <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted">
+        Full walkthrough:{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/guide">
+          how to resize images without uploading
+        </a>
+        . Size table:{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/presets">
+          Instagram, YouTube, X presets
+        </a>
+        .
+      </p>
     </section>
   );
 }

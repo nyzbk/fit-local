@@ -1,6 +1,5 @@
 import { FAQ } from "@/content/faq";
-
-const SITE = "https://fit-local-six.vercel.app";
+import { CONTACT_EMAIL, SITE_ORIGIN, STUDIO_NAME } from "@/content/contact";
 
 export function JsonLd() {
   const faq = {
@@ -16,12 +15,18 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Fit",
-    url: SITE,
+    url: SITE_ORIGIN,
     applicationCategory: "MultimediaApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     description:
       "Resize photos for Instagram, YouTube and X in the browser. Exact pixels, social presets, batch ZIP. No upload, no signup, no watermark.",
+    creator: {
+      "@type": "Organization",
+      name: STUDIO_NAME,
+      email: CONTACT_EMAIL,
+      url: SITE_ORIGIN,
+    },
   };
   return (
     <>
