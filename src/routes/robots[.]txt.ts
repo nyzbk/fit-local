@@ -8,6 +8,18 @@ export const Route = createFileRoute("/robots.txt")({
         const body = `User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
 Sitemap: ${origin}/sitemap.xml
 `;
         return new Response(body, {
