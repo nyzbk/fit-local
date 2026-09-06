@@ -99,6 +99,18 @@ function PresetsPage() {
         <a className="text-accent underline-offset-4 hover:underline" href="/modes">
           Fill vs Fit vs Stretch
         </a>
+        . Pixel numbers are not the whole job:{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/instagram">
+          Instagram still recompresses
+        </a>
+        ,{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/youtube">
+          YouTube wants a 16:9 still
+        </a>
+        , and{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/avatar">
+          avatars get a circular mask
+        </a>
         .
       </p>
     </Article>

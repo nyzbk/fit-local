@@ -69,6 +69,21 @@ function UseCasesPage() {
         job (Strip), or format conversion (Shift). Use those instead of stretching this resizer into a suite it is
         not.
       </p>
+      <p>
+        Platform ceilings, not another size table:{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/instagram">
+          Instagram
+        </a>
+        ,{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/youtube">
+          YouTube
+        </a>
+        ,{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/avatar">
+          avatar
+        </a>
+        .
+      </p>
     </Article>
   );
 }

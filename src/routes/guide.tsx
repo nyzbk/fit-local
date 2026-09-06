@@ -105,6 +105,18 @@ function GuidePage() {
           crop modes
         </a>
         ,{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/instagram">
+          Instagram frames
+        </a>
+        ,{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/youtube">
+          YouTube thumbnails
+        </a>
+        ,{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/avatar">
+          avatar crop
+        </a>
+        ,{" "}
         <a className="text-accent underline-offset-4 hover:underline" href="/faq">
           FAQ
         </a>

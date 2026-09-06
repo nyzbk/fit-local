@@ -97,6 +97,21 @@ function Home() {
           </a>
           .
         </p>
+        <p className="mt-4 text-pretty">
+          Three jobs that are not the same preset table:{" "}
+          <a className="text-accent underline-offset-4 hover:underline" href="/instagram">
+            Instagram frames
+          </a>{" "}
+          (feed / story / reel cover — their encoder still runs),{" "}
+          <a className="text-accent underline-offset-4 hover:underline" href="/youtube">
+            YouTube thumbnails
+          </a>{" "}
+          (a 1280×720 still, not the video file), and{" "}
+          <a className="text-accent underline-offset-4 hover:underline" href="/avatar">
+            avatar crop
+          </a>{" "}
+          (the platform paints a circle on your square).
+        </p>
         <ul className="mt-6 grid gap-2 sm:grid-cols-2">
           <li>
             <a href="/guide" className="text-accent underline-offset-4 hover:underline">
@@ -116,6 +131,21 @@ function Home() {
           <li>
             <a href="/use-cases" className="text-accent underline-offset-4 hover:underline">
               Who uses a private resizer
+            </a>
+          </li>
+          <li>
+            <a href="/instagram" className="text-accent underline-offset-4 hover:underline">
+              Instagram feed, story, reel cover
+            </a>
+          </li>
+          <li>
+            <a href="/youtube" className="text-accent underline-offset-4 hover:underline">
+              YouTube thumbnail 1280×720
+            </a>
+          </li>
+          <li>
+            <a href="/avatar" className="text-accent underline-offset-4 hover:underline">
+              Square avatar for X and LinkedIn
             </a>
           </li>
         </ul>

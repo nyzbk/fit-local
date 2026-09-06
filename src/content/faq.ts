@@ -1,4 +1,6 @@
-export const FAQ = [
+export type FaqItem = { q: string; a: string };
+
+export const FAQ: FaqItem[] = [
   {
     q: "What is the difference between Fill, Fit, and Stretch?",
     a: "Fill (default) covers the target frame and center-crops overflow — the same idea as CSS background-size: cover. Fit contains the whole photo and pads leftover space with black or white. Stretch distorts the image to the exact width and height. For Instagram feed squares, Fill is usually what you want. For a full product shot that must not be cropped, use Fit. Stretch is for banners where you already accept distortion or the source already matches the ratio.",

@@ -14,6 +14,9 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GuideRouteImport } from './routes/guide'
+import { Route as InstagramRouteImport } from './routes/instagram'
+import { Route as AvatarRouteImport } from './routes/avatar'
+import { Route as YoutubeRouteImport } from './routes/youtube'
 import { Route as ModesRouteImport } from './routes/modes'
 import { Route as PresetsRouteImport } from './routes/presets'
 import { Route as PrivacyRouteImport } from './routes/privacy'
@@ -45,6 +48,21 @@ const FaqRoute = FaqRouteImport.update({
 const GuideRoute = GuideRouteImport.update({
   id: '/guide',
   path: '/guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstagramRoute = InstagramRouteImport.update({
+  id: '/instagram',
+  path: '/instagram',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvatarRoute = AvatarRouteImport.update({
+  id: '/avatar',
+  path: '/avatar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const YoutubeRoute = YoutubeRouteImport.update({
+  id: '/youtube',
+  path: '/youtube',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ModesRoute = ModesRouteImport.update({
@@ -89,6 +107,9 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
+  '/instagram': typeof InstagramRoute
+  '/avatar': typeof AvatarRoute
+  '/youtube': typeof YoutubeRoute
   '/modes': typeof ModesRoute
   '/presets': typeof PresetsRoute
   '/privacy': typeof PrivacyRoute
@@ -103,6 +124,9 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
+  '/instagram': typeof InstagramRoute
+  '/avatar': typeof AvatarRoute
+  '/youtube': typeof YoutubeRoute
   '/modes': typeof ModesRoute
   '/presets': typeof PresetsRoute
   '/privacy': typeof PrivacyRoute
@@ -118,6 +142,9 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
+  '/instagram': typeof InstagramRoute
+  '/avatar': typeof AvatarRoute
+  '/youtube': typeof YoutubeRoute
   '/modes': typeof ModesRoute
   '/presets': typeof PresetsRoute
   '/privacy': typeof PrivacyRoute
@@ -134,6 +161,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/guide'
+    | '/instagram'
+    | '/avatar'
+    | '/youtube'
     | '/modes'
     | '/presets'
     | '/privacy'
@@ -148,6 +178,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/guide'
+    | '/instagram'
+    | '/avatar'
+    | '/youtube'
     | '/modes'
     | '/presets'
     | '/privacy'
@@ -162,6 +195,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/guide'
+    | '/instagram'
+    | '/avatar'
+    | '/youtube'
     | '/modes'
     | '/presets'
     | '/privacy'
@@ -177,6 +213,9 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   GuideRoute: typeof GuideRoute
+  InstagramRoute: typeof InstagramRoute
+  AvatarRoute: typeof AvatarRoute
+  YoutubeRoute: typeof YoutubeRoute
   ModesRoute: typeof ModesRoute
   PresetsRoute: typeof PresetsRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -221,6 +260,27 @@ declare module '@tanstack/react-router' {
       path: '/guide'
       fullPath: '/guide'
       preLoaderRoute: typeof GuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instagram': {
+      id: '/instagram'
+      path: '/instagram'
+      fullPath: '/instagram'
+      preLoaderRoute: typeof InstagramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/avatar': {
+      id: '/avatar'
+      path: '/avatar'
+      fullPath: '/avatar'
+      preLoaderRoute: typeof AvatarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/youtube': {
+      id: '/youtube'
+      path: '/youtube'
+      fullPath: '/youtube'
+      preLoaderRoute: typeof YoutubeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/modes': {
@@ -281,6 +341,9 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   GuideRoute: GuideRoute,
+  InstagramRoute: InstagramRoute,
+  AvatarRoute: AvatarRoute,
+  YoutubeRoute: YoutubeRoute,
   ModesRoute: ModesRoute,
   PresetsRoute: PresetsRoute,
   PrivacyRoute: PrivacyRoute,

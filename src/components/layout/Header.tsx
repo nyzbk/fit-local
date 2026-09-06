@@ -3,10 +3,10 @@ import { CropMark } from "@/components/fit/CropMark";
 
 const NAV = [
   { href: "/guide", label: "Guide" },
-  { href: "/presets", label: "Presets" },
-  { href: "/modes", label: "Modes" },
+  { href: "/instagram", label: "Instagram" },
+  { href: "/youtube", label: "YouTube" },
+  { href: "/avatar", label: "Avatar" },
   { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
