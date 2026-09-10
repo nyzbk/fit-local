@@ -110,7 +110,11 @@ function Home() {
           <a className="text-accent underline-offset-4 hover:underline" href="/avatar">
             avatar crop
           </a>{" "}
-          (the platform paints a circle on your square).
+          (the platform paints a circle on your square). Paper size × DPI is a different job —{" "}
+          <a className="text-accent underline-offset-4 hover:underline" href="/print">
+            from paper size to pixels
+          </a>
+          .
         </p>
         <ul className="mt-6 grid gap-2 sm:grid-cols-2">
           <li>
@@ -141,6 +145,11 @@ function Home() {
           <li>
             <a href="/youtube" className="text-accent underline-offset-4 hover:underline">
               YouTube thumbnail 1280×720
+            </a>
+          </li>
+          <li>
+            <a href="/print" className="text-accent underline-offset-4 hover:underline">
+              From paper size to pixels
             </a>
           </li>
           <li>

@@ -11,19 +11,20 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AvatarRouteImport } from './routes/avatar'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GuideRouteImport } from './routes/guide'
 import { Route as InstagramRouteImport } from './routes/instagram'
-import { Route as AvatarRouteImport } from './routes/avatar'
-import { Route as YoutubeRouteImport } from './routes/youtube'
 import { Route as ModesRouteImport } from './routes/modes'
 import { Route as PresetsRouteImport } from './routes/presets'
+import { Route as PrintRouteImport } from './routes/print'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as UseCasesRouteImport } from './routes/use-cases'
+import { Route as YoutubeRouteImport } from './routes/youtube'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -33,6 +34,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvatarRoute = AvatarRouteImport.update({
+  id: '/avatar',
+  path: '/avatar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -55,16 +61,6 @@ const InstagramRoute = InstagramRouteImport.update({
   path: '/instagram',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AvatarRoute = AvatarRouteImport.update({
-  id: '/avatar',
-  path: '/avatar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const YoutubeRoute = YoutubeRouteImport.update({
-  id: '/youtube',
-  path: '/youtube',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ModesRoute = ModesRouteImport.update({
   id: '/modes',
   path: '/modes',
@@ -73,6 +69,11 @@ const ModesRoute = ModesRouteImport.update({
 const PresetsRoute = PresetsRouteImport.update({
   id: '/presets',
   path: '/presets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrintRoute = PrintRouteImport.update({
+  id: '/print',
+  path: '/print',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -100,129 +101,141 @@ const UseCasesRoute = UseCasesRouteImport.update({
   path: '/use-cases',
   getParentRoute: () => rootRouteImport,
 } as any)
+const YoutubeRoute = YoutubeRouteImport.update({
+  id: '/youtube',
+  path: '/youtube',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/avatar': typeof AvatarRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/instagram': typeof InstagramRoute
-  '/avatar': typeof AvatarRoute
-  '/youtube': typeof YoutubeRoute
   '/modes': typeof ModesRoute
   '/presets': typeof PresetsRoute
+  '/print': typeof PrintRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
+  '/youtube': typeof YoutubeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/avatar': typeof AvatarRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/instagram': typeof InstagramRoute
-  '/avatar': typeof AvatarRoute
-  '/youtube': typeof YoutubeRoute
   '/modes': typeof ModesRoute
   '/presets': typeof PresetsRoute
+  '/print': typeof PrintRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
+  '/youtube': typeof YoutubeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/avatar': typeof AvatarRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/instagram': typeof InstagramRoute
-  '/avatar': typeof AvatarRoute
-  '/youtube': typeof YoutubeRoute
   '/modes': typeof ModesRoute
   '/presets': typeof PresetsRoute
+  '/print': typeof PrintRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
+  '/youtube': typeof YoutubeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/avatar'
     | '/contact'
     | '/faq'
     | '/guide'
     | '/instagram'
-    | '/avatar'
-    | '/youtube'
     | '/modes'
     | '/presets'
+    | '/print'
     | '/privacy'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/terms'
     | '/use-cases'
+    | '/youtube'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/avatar'
     | '/contact'
     | '/faq'
     | '/guide'
     | '/instagram'
-    | '/avatar'
-    | '/youtube'
     | '/modes'
     | '/presets'
+    | '/print'
     | '/privacy'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/terms'
     | '/use-cases'
+    | '/youtube'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/avatar'
     | '/contact'
     | '/faq'
     | '/guide'
     | '/instagram'
-    | '/avatar'
-    | '/youtube'
     | '/modes'
     | '/presets'
+    | '/print'
     | '/privacy'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/terms'
     | '/use-cases'
+    | '/youtube'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AvatarRoute: typeof AvatarRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   GuideRoute: typeof GuideRoute
   InstagramRoute: typeof InstagramRoute
-  AvatarRoute: typeof AvatarRoute
-  YoutubeRoute: typeof YoutubeRoute
   ModesRoute: typeof ModesRoute
   PresetsRoute: typeof PresetsRoute
+  PrintRoute: typeof PrintRoute
   PrivacyRoute: typeof PrivacyRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   UseCasesRoute: typeof UseCasesRoute
+  YoutubeRoute: typeof YoutubeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -239,6 +252,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/avatar': {
+      id: '/avatar'
+      path: '/avatar'
+      fullPath: '/avatar'
+      preLoaderRoute: typeof AvatarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -269,20 +289,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InstagramRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/avatar': {
-      id: '/avatar'
-      path: '/avatar'
-      fullPath: '/avatar'
-      preLoaderRoute: typeof AvatarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/youtube': {
-      id: '/youtube'
-      path: '/youtube'
-      fullPath: '/youtube'
-      preLoaderRoute: typeof YoutubeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/modes': {
       id: '/modes'
       path: '/modes'
@@ -295,6 +301,13 @@ declare module '@tanstack/react-router' {
       path: '/presets'
       fullPath: '/presets'
       preLoaderRoute: typeof PresetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/print': {
+      id: '/print'
+      path: '/print'
+      fullPath: '/print'
+      preLoaderRoute: typeof PrintRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -332,25 +345,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UseCasesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/youtube': {
+      id: '/youtube'
+      path: '/youtube'
+      fullPath: '/youtube'
+      preLoaderRoute: typeof YoutubeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AvatarRoute: AvatarRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   GuideRoute: GuideRoute,
   InstagramRoute: InstagramRoute,
-  AvatarRoute: AvatarRoute,
-  YoutubeRoute: YoutubeRoute,
   ModesRoute: ModesRoute,
   PresetsRoute: PresetsRoute,
+  PrintRoute: PrintRoute,
   PrivacyRoute: PrivacyRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   UseCasesRoute: UseCasesRoute,
+  YoutubeRoute: YoutubeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

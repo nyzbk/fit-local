@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 const PATHS = [
   "/",
   "/guide",
+  "/print",
   "/presets",
   "/instagram",
   "/youtube",
@@ -26,7 +27,12 @@ export const Route = createFileRoute("/sitemap.xml")({
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${PATHS.map((path) => {
   const loc = `${origin}${path === "/" ? "" : path}`;
-  const priority = path === "/" ? "1.0" : ["/guide", "/presets", "/instagram", "/youtube", "/avatar"].includes(path) ? "0.9" : "0.8";
+  const priority =
+    path === "/"
+      ? "1.0"
+      : ["/guide", "/print", "/presets", "/instagram", "/youtube", "/avatar"].includes(path)
+        ? "0.9"
+        : "0.8";
   return `  <url>
     <loc>${loc}</loc>
     <lastmod>${lastmod}</lastmod>

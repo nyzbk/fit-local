@@ -1,11 +1,12 @@
 import { AdUnit } from "@/components/ads/AdUnit";
-import { CONTACT_EMAIL } from "@/content/contact";
+import { CONTACT_EMAIL, HUB_URL } from "@/content/contact";
 
 const COLS = [
   {
     title: "Tool",
     links: [
       { href: "/", label: "Resize now" },
+      { href: "/print", label: "Print size (DPI)" },
       { href: "/guide", label: "How to resize" },
       { href: "/presets", label: "Social presets" },
       { href: "/instagram", label: "Instagram sizes" },
@@ -41,11 +42,20 @@ export function Footer() {
           <div>
             <p className="font-display text-lg font-semibold">Fit</p>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-muted">
-              Private image resizer. Exact pixels and social presets. Files never leave this device.
+              Private image resizer. Exact pixels, social presets, and print DPI. Files never leave this device.
             </p>
             <p className="mt-3 text-sm">
               <a className="text-accent underline-offset-4 hover:underline" href={`mailto:${CONTACT_EMAIL}`}>
                 {CONTACT_EMAIL}
+              </a>
+            </p>
+            <p className="mt-4">
+              <a
+                href={HUB_URL}
+                className="inline-flex min-h-11 items-center rounded-md border border-line bg-elevated px-4 text-sm font-semibold text-fg hover:border-accent/50"
+                rel="noopener noreferrer"
+              >
+                Ultimatum hub
               </a>
             </p>
           </div>

@@ -46,7 +46,12 @@ function GuidePage() {
         Facebook 1200×630, Pinterest 1000×1500. Or type width and height. Lock aspect if you want the second number to
         follow the first. Aspect shortcuts (1:1, 4:5, 9:16, 16:9, 4:3, 3:2) adjust the pair without changing the
         longest edge more than they have to. The long edge cannot exceed 8192 pixels. That cap exists so a phone tab
-        does not try to allocate a 200 megapixel canvas.
+        does not try to allocate a 200 megapixel canvas. If you think in paper instead of pixels — 4×6″, 10×15 cm, A4
+        at 300 DPI — use{" "}
+        <a className="text-accent underline-offset-4 hover:underline" href="/print">
+          From paper size to pixels
+        </a>
+        . That page converts inches or centimetres × DPI into the same integers this guide then resizes to.
       </p>
       <h2 className="pt-4 font-display text-xl text-fg">3. Choose Fill, Fit, or Stretch</h2>
       <p>
