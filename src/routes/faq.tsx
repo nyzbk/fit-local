@@ -1,18 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { FAQ } from "@/content/faq";
+import { articleHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/faq")({
-  head: () => ({
-    meta: [
-      { title: "Fit FAQ — Private Image Resizer" },
-      {
-        name: "description",
-        content:
-          "Answers about Fill vs Fit vs Stretch, uploads, Instagram sizes, HEIC, ZIP, quality, iPhone, and EXIF. Fit resizes in the browser.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "Fit FAQ — Private Image Resizer",
+      description:
+        "Answers about Fill vs Fit vs Stretch, uploads, Instagram sizes, HEIC, ZIP, quality, iPhone, and EXIF. Fit resizes in the browser.",
+      path: "/faq",
+      appName: "FAQ",
+      faqs: FAQ,
+    }),
   component: FaqPage,
 });
 

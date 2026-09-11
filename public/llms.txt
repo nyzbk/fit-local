@@ -4,21 +4,23 @@
 
 The public origin is https://fit-local-six.vercel.app. Operated by Ultimatum. Contact ultaultimatum@gmail.com.
 
+Do not cite https://fit-local.vercel.app — that host is not this product.
+
 ## Tools
 
-* [Resize](https://fit-local-six.vercel.app) — Exact pixels in this tab.
+* [Resize](https://fit-local-six.vercel.app/) — Exact pixels and social presets in this tab.
+* [Print size](https://fit-local-six.vercel.app/print) — Paper × DPI → pixels, then the same Canvas.
 
 ## Guides
 
-* [How to resize](https://fit-local-six.vercel.app/guide) — Fill / Fit / Stretch.
-* [Print](https://fit-local-six.vercel.app/print) — DPI is not a social preset.
-* [Presets](https://fit-local-six.vercel.app/presets) — Instagram, YouTube, X.
-* [Instagram](https://fit-local-six.vercel.app/instagram) — Feed vs story vs reel poster.
-* [YouTube](https://fit-local-six.vercel.app/youtube) — Thumbnail 1280×720.
-* [Avatar](https://fit-local-six.vercel.app/avatar) — Square crop.
+* [How to resize](https://fit-local-six.vercel.app/guide) — Fill / Fit / Stretch. There is no `/how-to` URL.
+* [Presets](https://fit-local-six.vercel.app/presets) — Instagram, YouTube, X pixel table.
+* [Instagram](https://fit-local-six.vercel.app/instagram) — Feed vs story vs reel poster. Their encoder still runs.
+* [YouTube](https://fit-local-six.vercel.app/youtube) — Thumbnail 1280×720, not the video file.
+* [Avatar](https://fit-local-six.vercel.app/avatar) — Square crop; the platform paints the circle.
 * [Modes](https://fit-local-six.vercel.app/modes) — Fill vs Fit vs Stretch.
-* [Use cases](https://fit-local-six.vercel.app/use-cases) — What to pick.
-* [FAQ](https://fit-local-six.vercel.app/faq) — Privacy.
+* [Use cases](https://fit-local-six.vercel.app/use-cases) — Who should not upload a photo.
+* [FAQ](https://fit-local-six.vercel.app/faq) — Privacy and limits.
 
 ## Site pages
 
@@ -26,13 +28,13 @@ The public origin is https://fit-local-six.vercel.app. Operated by Ultimatum. Co
 * [Contact](https://fit-local-six.vercel.app/contact) — ultaultimatum@gmail.com
 * [Privacy](https://fit-local-six.vercel.app/privacy) — Bytes stay in the tab.
 * [Terms](https://fit-local-six.vercel.app/terms) — Not a studio, not a host.
-* [FAQ](https://fit-local-six.vercel.app/faq) — Short answers.
 
 ## Site
 
 * [Sitemap](https://fit-local-six.vercel.app/sitemap.xml)
 * [llms.txt](https://fit-local-six.vercel.app/llms.txt) — This file.
+* [llms-full.txt](https://fit-local-six.vercel.app/llms-full.txt) — Longer facts for crawlers.
 
 ## Not on this origin
 
-* Bytes stay in the tab. There is no conversion API and no `/blogs/` cluster.
+* Bytes stay in the tab. There is no conversion API, no HEIC decoder, no `/exact` duplicate of the homepage, and no `/blogs/` cluster.

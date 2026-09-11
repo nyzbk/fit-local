@@ -1,18 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { CONTACT_EMAIL } from "@/content/contact";
+import { legalHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/terms")({
-  head: () => ({
-    meta: [
-      { title: "Terms of Use — Fit" },
-      {
-        name: "description",
-        content:
-          "Fit is a free browser image resizer provided as-is. Canvas resample is not AI upscale. Lawful use only.",
-      },
-    ],
-  }),
+  head: () =>
+    legalHead({
+      title: "Terms of Use — Fit",
+      description:
+        "Fit is a free browser image resizer provided as-is. Canvas resample is not AI upscale. Lawful use only.",
+      path: "/terms",
+    }),
   component: TermsPage,
 });
 

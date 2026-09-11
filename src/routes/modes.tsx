@@ -1,17 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
+import { articleHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/modes")({
-  head: () => ({
-    meta: [
-      { title: "Fill vs Fit vs Stretch — Image Resize Modes | Fit" },
-      {
-        name: "description",
-        content:
-          "How Fit’s three resize modes crop or pad a photo. Fill is cover + center crop. Fit is contain + pad. Stretch distorts to the exact frame.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "Fill vs Fit vs Stretch — Image Resize Modes | Fit",
+      description:
+        "How Fit’s three resize modes crop or pad a photo. Fill is cover + center crop. Fit is contain + pad. Stretch distorts to the exact frame.",
+      path: "/modes",
+      appName: "Fill, Fit, Stretch",
+    }),
   component: ModesPage,
 });
 

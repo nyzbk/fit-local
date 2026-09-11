@@ -1,17 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
+import { articleHead } from "@/lib/seo";
+
+const GUIDE_STEPS = [
+  "Choose JPG, PNG or WebP. Convert HEIC first — this tab does not decode it.",
+  "Pick a social preset or type pixels. Paper × DPI lives on /print, not here.",
+  "Choose Fill, Fit or Stretch. Preview shows crop vs pad vs distort.",
+  "Resize, then download a file or ZIP. Re-open the result if you need to check the pixel count.",
+];
 
 export const Route = createFileRoute("/guide")({
-  head: () => ({
-    meta: [
-      { title: "How to Resize Images in the Browser — Fit Guide" },
-      {
-        name: "description",
-        content:
-          "Step-by-step: resize JPG, PNG and WebP to Instagram, YouTube and X sizes without uploading. Fill, Fit, Stretch, batch ZIP, iPhone notes.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "How to Resize Images in the Browser — Fit Guide",
+      description:
+        "Step-by-step: resize JPG, PNG and WebP to Instagram, YouTube and X sizes without uploading. Fill, Fit, Stretch, batch ZIP, iPhone notes.",
+      path: "/guide",
+      appName: "How to resize",
+      howToName: "How to resize images online without uploading them",
+      howToSteps: GUIDE_STEPS,
+    }),
   component: GuidePage,
 });
 

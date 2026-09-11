@@ -1,18 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { CONTACT_EMAIL, STUDIO_NAME } from "@/content/contact";
+import { articleHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Fit — Private Image Resizer" },
-      {
-        name: "description",
-        content:
-          "Fit is a free, private image resizer from Ultimatum. Exact pixels and social presets in the browser. No upload, no account, no watermark.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "About Fit — Private Image Resizer",
+      description:
+        "Fit is a free, private image resizer from Ultimatum. Exact pixels and social presets in the browser. No upload, no account, no watermark.",
+      path: "/about",
+      appName: "About",
+    }),
   component: AboutPage,
 });
 

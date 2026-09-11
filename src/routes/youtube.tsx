@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { FaqSection } from "@/components/site/FaqSection";
+import { articleHead } from "@/lib/seo";
 
 const FAQ_YT = [
   {
@@ -18,16 +19,15 @@ const FAQ_YT = [
 ];
 
 export const Route = createFileRoute("/youtube")({
-  head: () => ({
-    meta: [
-      { title: "YouTube thumbnail size in the browser — Fit" },
-      {
-        name: "description",
-        content:
-          "Resize a still to 1280×720 for YouTube thumbnails on this tab. Safe zone and 16:9 frame. Fit does not encode the video.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "YouTube thumbnail size in the browser — Fit",
+      description:
+        "Resize a still to 1280×720 for YouTube thumbnails on this tab. Safe zone and 16:9 frame. Fit does not encode the video.",
+      path: "/youtube",
+      appName: "YouTube thumbnail",
+      faqs: FAQ_YT,
+    }),
   component: YoutubePage,
 });
 

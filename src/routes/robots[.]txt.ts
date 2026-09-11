@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SITE_ORIGIN } from "@/content/contact";
 
 export const Route = createFileRoute("/robots.txt")({
   server: {
     handlers: {
-      GET: async ({ request }: { request: Request }) => {
-        const origin = "https://fit-local-six.vercel.app";
-        void request;
+      GET: async () => {
+        const origin = SITE_ORIGIN;
         const body = `User-agent: *
 Allow: /
 
@@ -46,6 +46,8 @@ User-agent: PerplexityBot
 Allow: /
 
 Sitemap: ${origin}/sitemap.xml
+# AEO: ${origin}/llms.txt
+# AEO: ${origin}/llms-full.txt
 `;
         return new Response(body, {
           headers: { "content-type": "text/plain; charset=utf-8" },

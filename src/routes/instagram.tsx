@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { FaqSection } from "@/components/site/FaqSection";
+import { articleHead } from "@/lib/seo";
 
 const FAQ_IG = [
   {
@@ -18,16 +19,15 @@ const FAQ_IG = [
 ];
 
 export const Route = createFileRoute("/instagram")({
-  head: () => ({
-    meta: [
-      { title: "Instagram photo sizes in the browser — Fit" },
-      {
-        name: "description",
-        content:
-          "Resize to Instagram feed, story and reel-cover frames on this tab. Fit sets pixels before upload. It does not turn off Instagram’s own recompress.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "Instagram photo sizes in the browser — Fit",
+      description:
+        "Resize to Instagram feed, story and reel-cover frames on this tab. Fit sets pixels before upload. It does not turn off Instagram’s own recompress.",
+      path: "/instagram",
+      appName: "Instagram sizes",
+      faqs: FAQ_IG,
+    }),
   component: InstagramPage,
 });
 

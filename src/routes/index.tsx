@@ -5,14 +5,36 @@ import { HowItWorks } from "@/components/site/HowItWorks";
 import { FaqSection } from "@/components/site/FaqSection";
 import { SoftAgencyCta } from "@/components/ads/SoftAgencyCta";
 import { AdUnit } from "@/components/ads/AdUnit";
-import { JsonLd } from "@/lib/seo";
+import { FAQ } from "@/content/faq";
+import { toolHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/")({ component: Home });
+const HOME_TITLE = "Resize Images Online Free — Instagram, YouTube, X Presets";
+const HOME_DESC =
+  "Resize photos for Instagram, YouTube and X — free, private, no upload. Exact pixels, social presets, Fill / Fit / Stretch, batch ZIP. No signup, no watermark.";
+const HOME_STEPS = [
+  "Drop JPG, PNG or WebP. Bytes stay in this tab. HEIC is refused — convert first.",
+  "Pick a social preset or type exact width × height. Long edge caps at 8192.",
+  "Choose Fill (cover + crop), Fit (contain + pad), or Stretch.",
+  "Tap Resize. Canvas resamples on this device. Download a file or a ZIP.",
+];
+
+export const Route = createFileRoute("/")({
+  component: Home,
+  head: () =>
+    toolHead({
+      title: HOME_TITLE,
+      description: HOME_DESC,
+      path: "/",
+      appName: "Fit — Free Image Resizer",
+      faqs: FAQ.slice(0, 4),
+      howToName: "How to resize images in the browser",
+      howToSteps: HOME_STEPS,
+    }),
+});
 
 function Home() {
   return (
     <AppShell>
-      <JsonLd />
       <noscript>
         <p>
           Fit resizes photos for Instagram, YouTube and X entirely in this browser. Files never leave the device. Use

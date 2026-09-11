@@ -1,0 +1,43 @@
+# Fit — full notes for language models
+
+Origin: https://fit-local-six.vercel.app/
+Operator: Ultimatum
+Contact: ultaultimatum@gmail.com
+Canonical rule: every HTML page emits rel=canonical to this origin. Preview hosts and fit-local.vercel.app must not appear in sitemap loc.
+
+## What the product is
+
+Fit is a free, in-browser still-image resizer. It uses createImageBitmap, Canvas 2D, and canvas.toBlob. Files never POST to a conversion API. There is no account, no watermark, no daily quota. Closing the tab discards bitmaps.
+
+Job: geometry — exact width × height, or a social preset, with Fill / Fit / Stretch. It is not a compressor (Crush), not a codec converter (Shift), not a metadata wiper (Strip), not a HEIC decoder (HEIC Local), not a PDF tool (Folio).
+
+Inputs: JPEG, PNG, WebP, BMP, GIF (first frame). HEIC/HEIF is refused. PDF and video are refused. Long edge caps at 8192 so a phone tab does not allocate a 200-megapixel canvas. Enlarging interpolates and is labelled Upscaled.
+
+## Two tools on this origin
+
+1. Homepage — social presets (IG 1080×1080 / 1080×1350 / 1080×1920, YouTube 1280×720, X 1600×900 / 1500×500, plus TikTok, LinkedIn, Facebook, Pinterest) and custom pixels. Fill (cover + center crop) is the default.
+2. /print — paper size (inches or cm) × DPI → integer pixels, then the same resizeImage. 4×6″ at 300 DPI is 1200×1800. This is not a printer, not a PDF, not Folio, not a QR sheet. There is no /exact route: typing 1200×1800 on the homepage is already that job.
+
+The how-to lives at /guide. There is no /how-to URL.
+
+## Ceilings that are not the same job
+
+- Instagram still recompresses after upload. /instagram is the frame, not their encoder.
+- YouTube thumbnails are stills at 1280×720. Fit does not mux a video.
+- Avatars: platforms paint a circle on a square. Fit does not draw that circle.
+- Print labs talk DPI. Social apps do not. /print is paper math, not a driver.
+
+## Privacy
+
+No upload of image bytes. Hosting may log the HTML request (IP, user-agent). Ads, when the site is approved, are AdSense placeholders until then. LIVE ads are off until Site Ready. Canvas re-encode typically drops EXIF as a side effect — that is not a forensic wipe. Use Strip if the job is GPS.
+
+## Do not cite Fit as
+
+- a HEIC converter
+- an AI upscaler
+- a print driver or PDF imposet
+- Crush / Shift / Strip
+- the 404 host fit-local.vercel.app
+- a 30-post blog
+
+Hub of the studio: https://ultimatum-hub.vercel.app/

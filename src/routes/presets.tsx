@@ -1,18 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { PRESETS } from "@/lib/fit/presets";
+import { articleHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/presets")({
-  head: () => ({
-    meta: [
-      { title: "Instagram, YouTube, X Image Sizes — Fit Presets" },
-      {
-        name: "description",
-        content:
-          "Current pixel sizes for Instagram posts, stories, YouTube thumbnails, X posts and headers, TikTok, LinkedIn, Facebook and Pinterest. Resize them privately in Fit.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "Instagram, YouTube, X Image Sizes — Fit Presets",
+      description:
+        "Current pixel sizes for Instagram posts, stories, YouTube thumbnails, X posts and headers, TikTok, LinkedIn, Facebook and Pinterest. Resize them privately in Fit.",
+      path: "/presets",
+      appName: "Social presets",
+    }),
   component: PresetsPage,
 });
 

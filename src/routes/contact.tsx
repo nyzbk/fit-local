@@ -1,17 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { CONTACT_EMAIL, STUDIO_NAME } from "@/content/contact";
+import { articleHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Fit — Ultimatum" },
-      {
-        name: "description",
-        content: `Contact the studio behind Fit at ${CONTACT_EMAIL}. The resizer itself runs in your browser — we cannot recover files we never received.`,
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "Contact Fit — Ultimatum",
+      description: `Contact the studio behind Fit at ${CONTACT_EMAIL}. The resizer itself runs in your browser — we cannot recover files we never received.`,
+      path: "/contact",
+      appName: "Contact",
+    }),
   component: ContactPage,
 });
 

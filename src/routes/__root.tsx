@@ -26,7 +26,7 @@ export const Route = createRootRoute({
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "https://fit-local-six.vercel.app/og.jpg" },
-      { name: "robots", content: "index, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "google-adsense-account", content: "ca-pub-7636435144500691" },
       {
         name: "keywords",

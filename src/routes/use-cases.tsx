@@ -1,17 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
+import { articleHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/use-cases")({
-  head: () => ({
-    meta: [
-      { title: "When to Use a Private Image Resizer | Fit" },
-      {
-        name: "description",
-        content:
-          "Use cases for Fit: social teams, shops, newsletters, listings, and anyone who should not upload photos to a random converter.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "When to Use a Private Image Resizer | Fit",
+      description:
+        "Use cases for Fit: social teams, shops, newsletters, listings, and anyone who should not upload photos to a random converter.",
+      path: "/use-cases",
+      appName: "Use cases",
+    }),
   component: UseCasesPage,
 });
 

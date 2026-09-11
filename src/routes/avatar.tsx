@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { FaqSection } from "@/components/site/FaqSection";
+import { articleHead } from "@/lib/seo";
 
 const FAQ_AV = [
   {
@@ -18,16 +19,15 @@ const FAQ_AV = [
 ];
 
 export const Route = createFileRoute("/avatar")({
-  head: () => ({
-    meta: [
-      { title: "Square avatar crop for X and LinkedIn — Fit" },
-      {
-        name: "description",
-        content:
-          "Resize a profile photo to a square in the browser so circular masks on X and LinkedIn do not clip the face. Fit does not apply their circle for you.",
-      },
-    ],
-  }),
+  head: () =>
+    articleHead({
+      title: "Square avatar crop for X and LinkedIn — Fit",
+      description:
+        "Resize a profile photo to a square in the browser so circular masks on X and LinkedIn do not clip the face. Fit does not apply their circle for you.",
+      path: "/avatar",
+      appName: "Avatar crop",
+      faqs: FAQ_AV,
+    }),
   component: AvatarPage,
 });
 

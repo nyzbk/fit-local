@@ -1,18 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Article } from "@/components/site/Article";
 import { CONTACT_EMAIL } from "@/content/contact";
+import { legalHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacy")({
-  head: () => ({
-    meta: [
-      { title: "Privacy Policy — Fit" },
-      {
-        name: "description",
-        content:
-          "Fit resizes images in your browser. Photos are not uploaded. No account. Hosting logs and optional AdSense cookies are described here.",
-      },
-    ],
-  }),
+  head: () =>
+    legalHead({
+      title: "Privacy Policy — Fit",
+      description:
+        "Fit resizes images in your browser. Photos are not uploaded. No account. Hosting logs and optional AdSense cookies are described here.",
+      path: "/privacy",
+    }),
   component: PrivacyPage,
 });
 

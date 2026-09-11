@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { CONTENT_LASTMOD, SITE_ORIGIN } from "@/content/contact";
 
 const PATHS = [
   "/",
@@ -15,19 +16,18 @@ const PATHS = [
   "/about",
   "/privacy",
   "/terms",
-  "/llms.txt",
 ];
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
-      GET: async ({ request }: { request: Request }) => {
-        const origin = new URL(request.url).origin;
-        const lastmod = new Date().toISOString().slice(0, 10);
+      GET: async () => {
+        const origin = SITE_ORIGIN;
+        const lastmod = CONTENT_LASTMOD;
         const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${PATHS.map((path) => {
-  const loc = `${origin}${path === "/" ? "" : path}`;
+  const loc = path === "/" ? `${origin}/` : `${origin}${path}`;
   const priority =
     path === "/"
       ? "1.0"

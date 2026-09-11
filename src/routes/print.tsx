@@ -4,7 +4,7 @@ import { PrintApp } from "@/components/fit/PrintApp";
 import { FaqSection } from "@/components/site/FaqSection";
 import { SoftAgencyCta } from "@/components/ads/SoftAgencyCta";
 import { AdUnit } from "@/components/ads/AdUnit";
-import { SITE_ORIGIN } from "@/content/contact";
+import { toolHead } from "@/lib/seo";
 
 const FAQ_PRINT = [
   {
@@ -22,17 +22,22 @@ const FAQ_PRINT = [
 ];
 
 export const Route = createFileRoute("/print")({
-  head: () => ({
-    meta: [
-      { title: "From paper size to pixels — print DPI resizer | Fit" },
-      {
-        name: "description",
-        content:
-          "Convert 4×6 inch, 10×15 cm, A6, passport 2×2, or A4 plus DPI into pixels, then resize in this browser. Same Canvas as Fit. Not a PDF printer.",
-      },
-    ],
-    links: [{ rel: "canonical", href: `${SITE_ORIGIN}/print` }],
-  }),
+  head: () =>
+    toolHead({
+      title: "From paper size to pixels — print DPI resizer | Fit",
+      description:
+        "Convert 4×6 inch, 10×15 cm, A6, passport 2×2, or A4 plus DPI into pixels, then resize in this browser. Same Canvas as Fit. Not a PDF printer.",
+      path: "/print",
+      appName: "Fit print size",
+      faqs: FAQ_PRINT,
+      howToName: "How to resize a photo for print size",
+      howToSteps: [
+        "Pick a paper preset or type inches or centimetres.",
+        "Set DPI (300 for a lab print). The page shows integer pixels.",
+        "Drop the photo, choose Fill, Fit or Stretch, then resize.",
+        "Download the raster. This tab does not talk to a printer.",
+      ],
+    }),
   component: PrintPage,
 });
 
