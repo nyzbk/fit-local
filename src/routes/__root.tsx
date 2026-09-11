@@ -19,6 +19,13 @@ export const Route = createRootRoute({
           "Resize photos for Instagram, YouTube and X — free, private, no upload. Exact pixels, social presets, Fill / Fit / Stretch, batch ZIP. No signup, no watermark.",
       },
       { name: "theme-color", content: "#0B0F14" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: 'Fit' },
+      { property: "og:image", content: "https://fit-local-six.vercel.app/og.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://fit-local-six.vercel.app/og.jpg" },
       { name: "robots", content: "index, follow" },
       { name: "google-adsense-account", content: "ca-pub-7636435144500691" },
       {

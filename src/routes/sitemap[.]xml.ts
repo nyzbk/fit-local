@@ -15,6 +15,7 @@ const PATHS = [
   "/about",
   "/privacy",
   "/terms",
+  "/llms.txt",
 ];
 
 export const Route = createFileRoute("/sitemap.xml")({

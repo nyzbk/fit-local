@@ -1,0 +1,38 @@
+# Fit
+
+> Resize photos for Instagram, YouTube and X in the browser. Exact pixels, presets, batch ZIP.
+
+The public origin is https://fit-local-six.vercel.app. Operated by Ultimatum. Contact ultaultimatum@gmail.com.
+
+## Tools
+
+* [Resize](https://fit-local-six.vercel.app) — Exact pixels in this tab.
+
+## Guides
+
+* [How to resize](https://fit-local-six.vercel.app/guide) — Fill / Fit / Stretch.
+* [Print](https://fit-local-six.vercel.app/print) — DPI is not a social preset.
+* [Presets](https://fit-local-six.vercel.app/presets) — Instagram, YouTube, X.
+* [Instagram](https://fit-local-six.vercel.app/instagram) — Feed vs story vs reel poster.
+* [YouTube](https://fit-local-six.vercel.app/youtube) — Thumbnail 1280×720.
+* [Avatar](https://fit-local-six.vercel.app/avatar) — Square crop.
+* [Modes](https://fit-local-six.vercel.app/modes) — Fill vs Fit vs Stretch.
+* [Use cases](https://fit-local-six.vercel.app/use-cases) — What to pick.
+* [FAQ](https://fit-local-six.vercel.app/faq) — Privacy.
+
+## Site pages
+
+* [About](https://fit-local-six.vercel.app/about) — Operator and what this tool refuses to be.
+* [Contact](https://fit-local-six.vercel.app/contact) — ultaultimatum@gmail.com
+* [Privacy](https://fit-local-six.vercel.app/privacy) — Bytes stay in the tab.
+* [Terms](https://fit-local-six.vercel.app/terms) — Not a studio, not a host.
+* [FAQ](https://fit-local-six.vercel.app/faq) — Short answers.
+
+## Site
+
+* [Sitemap](https://fit-local-six.vercel.app/sitemap.xml)
+* [llms.txt](https://fit-local-six.vercel.app/llms.txt) — This file.
+
+## Not on this origin
+
+* Bytes stay in the tab. There is no conversion API and no `/blogs/` cluster.
