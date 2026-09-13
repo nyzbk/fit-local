@@ -158,7 +158,12 @@ function withCanonical(
   },
 ) {
   const url = absUrl(path);
-  const fullTitle = title.includes(" | Fit") || title.startsWith("Fit") ? title : `${title} | Fit`;
+  const trimmed = title.trim();
+  const branded =
+    trimmed.includes(" | Fit") ||
+    trimmed.startsWith("Fit") ||
+    /\bFit$/.test(trimmed);
+  const fullTitle = branded ? trimmed : `${trimmed} | Fit`;
   return {
     meta: [
       { title: fullTitle },
