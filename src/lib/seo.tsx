@@ -76,6 +76,13 @@ export function jsonLdScripts(opts: JsonLdOpts) {
   };
   const scripts: { type: string; children: string }[] = [
     { type: "application/ld+json", children: JSON.stringify(website) },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        ...publisher,
+      }),
+    },
     { type: "application/ld+json", children: JSON.stringify(breadcrumb) },
   ];
   if (opts.includeApp !== false) {
@@ -212,7 +219,10 @@ export function articleHead(opts: {
 }
 
 export function legalHead(opts: { title: string; description: string; path: string }) {
-  return withCanonical(opts.title, opts.description, opts.path);
+  return withCanonical(opts.title, opts.description, opts.path, {
+    appName: opts.title,
+    includeApp: false,
+  });
 }
 
 export function pageHead(title: string, description: string, path: string) {

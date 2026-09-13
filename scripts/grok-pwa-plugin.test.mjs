@@ -123,6 +123,22 @@ test("does not duplicate twitter:card or og:title", () => {
   assert.equal(twice.split('property="og:title"').length - 1, 1);
 });
 
+test("document title and canonical beat a brand site.title stub", () => {
+  const html =
+    '<html><head><title>Resize Images Online Free | Fit</title><link rel="canonical" href="https://fit-local-six.vercel.app/guide"/><meta name="description" content="Guide desc."></head></html>';
+  const out = injectGrokPwaHead(html, {
+    host: "fit-local-six.vercel.app",
+    site: { title: "Fit", card: "custom", image: "/og.jpg" },
+  });
+  assert.match(out, /property="og:title" content="Resize Images Online Free \| Fit"/);
+  assert.match(out, /name="twitter:title" content="Resize Images Online Free \| Fit"/);
+  assert.match(out, /property="og:url" content="https:\/\/fit-local-six\.vercel\.app\/guide"/);
+  assert.match(out, /property="og:image" content="https:\/\/fit-local-six\.vercel\.app\/og\.jpg"/);
+  assert.match(out, /property="og:description" content="Guide desc."/);
+  assert.match(out, /property="og:site_name" content="Fit"/);
+  assert.match(out, /name="apple-mobile-web-app-title" content="Fit"/);
+});
+
 test("a baked site.image is treated as a custom card", () => {
   const out = injectGrokPwaHead("<html><head></head></html>", {
     host: "wild-race.grok.me",
